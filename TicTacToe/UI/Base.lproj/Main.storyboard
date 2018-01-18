@@ -19,24 +19,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7vx-lh-Bhi">
-                                <rect key="frame" x="120" y="194" width="135" height="53"/>
+                                <rect key="frame" x="37.5" y="194" width="300" height="53"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="135" id="X2S-dQ-A8h"/>
                                     <constraint firstAttribute="height" constant="53" id="eym-pZ-fLa"/>
                                 </constraints>
-                                <state key="normal" title="Start as X" backgroundImage="btn-background.png"/>
+                                <state key="normal" title="Start as X" backgroundImage="btn-menu-background.png"/>
                                 <connections>
-                                    <segue destination="5DE-3P-CW7" kind="show" identifier="XplaySegue" id="HWW-Ve-sCR"/>
+                                    <segue destination="kUf-ft-n6C" kind="show" identifier="XplaySegue" id="Tij-Y9-G3f"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y6G-3r-v7M">
-                                <rect key="frame" x="120" y="327" width="135" height="53"/>
+                                <rect key="frame" x="37.5" y="327" width="300" height="53"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="53" id="acK-Am-sUP"/>
                                 </constraints>
-                                <state key="normal" title="Start as O" backgroundImage="btn-background.png"/>
+                                <state key="normal" title="Start as O" backgroundImage="btn-menu-background.png"/>
                                 <connections>
-                                    <segue destination="5DE-3P-CW7" kind="show" identifier="OplaySegue" id="4hS-gw-AqM"/>
+                                    <segue destination="kUf-ft-n6C" kind="show" identifier="OplaySegue" id="aOI-aP-45G"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -61,33 +61,27 @@
             <objects>
                 <collectionViewController id="5DE-3P-CW7" customClass="GameFieldViewController" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" id="3Iv-AH-bKH">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="363" height="363"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <collectionViewLayout key="collectionViewLayout" id="S9x-h9-nS4" customClass="TttPlayfieldLayout"/>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SignCell" id="LR1-Xu-SQx" customClass="SignCell">
-                                <rect key="frame" x="0.0" y="0.0" width="102" height="105"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" reuseIdentifier="SignCell" id="LR1-Xu-SQx" customClass="SignCell">
+                                <rect key="frame" x="0.0" y="0.0" width="102" height="104"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="102" height="105"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="102" height="104"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="o_mark.png" translatesAutoresizingMaskIntoConstraints="NO" id="Vzd-Ix-ciy">
-                                            <rect key="frame" x="0.0" y="0.0" width="102" height="105"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="o_mark.png" translatesAutoresizingMaskIntoConstraints="NO" id="Vzd-Ix-ciy">
+                                            <rect key="frame" x="7" y="9" width="87" height="87"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </imageView>
                                     </subviews>
                                 </view>
-                                <constraints>
-                                    <constraint firstItem="Vzd-Ix-ciy" firstAttribute="top" secondItem="LR1-Xu-SQx" secondAttribute="top" id="4Nd-nE-6o4"/>
-                                    <constraint firstItem="Vzd-Ix-ciy" firstAttribute="width" secondItem="LR1-Xu-SQx" secondAttribute="width" id="Aal-2C-7XC"/>
-                                    <constraint firstItem="Vzd-Ix-ciy" firstAttribute="height" secondItem="LR1-Xu-SQx" secondAttribute="height" id="Mjn-p1-6TL"/>
-                                    <constraint firstItem="Vzd-Ix-ciy" firstAttribute="leading" secondItem="LR1-Xu-SQx" secondAttribute="leading" id="QO7-JH-2EO"/>
-                                </constraints>
-                                <size key="customSize" width="102" height="105"/>
+                                <size key="customSize" width="102" height="104"/>
                                 <connections>
-                                    <outlet property="backgroundView" destination="Vzd-Ix-ciy" id="Rvp-D7-Vaj"/>
                                     <outlet property="imgSign" destination="Vzd-Ix-ciy" id="IjL-GX-3b7"/>
                                 </connections>
                             </collectionViewCell>
@@ -100,7 +94,58 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZXz-0K-VD0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1144.8" y="26.53673163418291"/>
+            <point key="canvasLocation" x="1893.5999999999999" y="768.66566716641682"/>
+        </scene>
+        <!--Game Scene View Controller-->
+        <scene sceneID="5Od-HG-wyn">
+            <objects>
+                <viewController id="kUf-ft-n6C" customClass="GameSceneViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="J7K-pS-LNu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-GameField.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZV2-tn-cnX">
+                                <rect key="frame" x="6" y="106" width="363" height="363"/>
+                            </imageView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dWq-My-fjH">
+                                <rect key="frame" x="6" y="106" width="363" height="363"/>
+                                <connections>
+                                    <segue destination="5DE-3P-CW7" kind="embed" identifier="embedGameField" id="FVb-gx-xc0"/>
+                                </connections>
+                            </containerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jGZ-Pe-bFc">
+                                <rect key="frame" x="114" y="536" width="147" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="ui9-4Z-Rhz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dWq-My-fjH" firstAttribute="leading" secondItem="Tcn-jv-1qw" secondAttribute="leading" constant="6" id="5OZ-Mk-ZRY"/>
+                            <constraint firstItem="ZV2-tn-cnX" firstAttribute="centerX" secondItem="J7K-pS-LNu" secondAttribute="centerX" id="6Ap-MU-PnY"/>
+                            <constraint firstItem="ZV2-tn-cnX" firstAttribute="top" secondItem="Tcn-jv-1qw" secondAttribute="top" constant="42" id="LX1-Do-Xkr"/>
+                            <constraint firstItem="dWq-My-fjH" firstAttribute="trailing" secondItem="ZV2-tn-cnX" secondAttribute="trailing" id="RyT-Se-bVp"/>
+                            <constraint firstItem="Tcn-jv-1qw" firstAttribute="bottom" secondItem="jGZ-Pe-bFc" secondAttribute="bottom" constant="110" id="c2p-2R-zX9"/>
+                            <constraint firstItem="dWq-My-fjH" firstAttribute="bottom" secondItem="ZV2-tn-cnX" secondAttribute="bottom" id="gMh-y0-5PH"/>
+                            <constraint firstItem="ZV2-tn-cnX" firstAttribute="top" secondItem="dWq-My-fjH" secondAttribute="top" id="ir6-jY-uJc"/>
+                            <constraint firstItem="ZV2-tn-cnX" firstAttribute="centerX" secondItem="jGZ-Pe-bFc" secondAttribute="centerX" id="ljw-aO-y4o"/>
+                            <constraint firstItem="ZV2-tn-cnX" firstAttribute="leading" secondItem="dWq-My-fjH" secondAttribute="leading" id="rDH-bq-gDG"/>
+                            <constraint firstItem="jGZ-Pe-bFc" firstAttribute="leading" secondItem="Tcn-jv-1qw" secondAttribute="leading" constant="114" id="soh-Vh-6PR"/>
+                            <constraint firstItem="jGZ-Pe-bFc" firstAttribute="top" secondItem="ZV2-tn-cnX" secondAttribute="bottom" constant="67" id="v7C-vy-R6p"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Tcn-jv-1qw"/>
+                    </view>
+                    <connections>
+                        <outlet property="lbNextPlayerTurnHint" destination="jGZ-Pe-bFc" id="S3y-DS-YEi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MFu-Lc-9O1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1044" y="805.54722638680664"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Muu-FZ-ghe">
@@ -120,10 +165,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="btn-background.png" width="100" height="100"/>
+        <image name="bg-GameField.png" width="375" height="375"/>
+        <image name="btn-menu-background.png" width="300" height="100"/>
         <image name="o_mark.png" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="4hS-gw-AqM"/>
+        <segue reference="Tij-Y9-G3f"/>
     </inferredMetricsTieBreakers>
 </document>

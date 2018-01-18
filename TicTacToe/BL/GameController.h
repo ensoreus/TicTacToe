@@ -13,6 +13,7 @@
 @interface GameController : NSObject<UICollectionViewDelegate>
 @property(nonatomic, copy) void (^onUpdateGameField)(void);
 @property(nonatomic, copy) void (^onVictory)(GameResult result);
+@property(nonatomic, copy) void (^onTurn)(NSString* whosTurn);
 @property(nonatomic, weak) GameModel* gameModel;
 - (void) startGameWithBeginner:(PlayRole)playerRole;
 - (void) resetGame;

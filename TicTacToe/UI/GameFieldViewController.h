@@ -10,5 +10,6 @@
 
 @interface GameFieldViewController : UICollectionViewController
 @property(nonatomic) BOOL isXFirst;
+@property(nonatomic, weak) UILabel* nextPlayerTurnHint;
 @end
 

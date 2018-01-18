@@ -33,13 +33,13 @@
     CGFloat _xOffset;
     CGFloat _yOffset;
     
-    _contentWidth  = _collectionViewFrame.size.width * 0.9f;
-    _contentHeight = _collectionViewFrame.size.width * 0.9f;
+    _contentWidth  = _collectionViewFrame.size.width;// * 0.9f;
+    _contentHeight = _collectionViewFrame.size.width;// * 0.9f;
     
-    _xOffset = _collectionViewFrame.size.width / 2 - _contentWidth / 2;
-    _yOffset = _collectionViewFrame.size.height / 2 - _contentHeight / 2;
+    _xOffset = 0;//_collectionViewFrame.size.width / 2 - _contentWidth / 2;
+    _yOffset = 0;//_collectionViewFrame.size.height / 2 - _contentHeight / 2;
     
-    _cellHeight = _cellWidth = _contentWidth * 0.9f / GAME_COLUMNS_COUNT;
+    _cellHeight = _cellWidth = _contentWidth / GAME_COLUMNS_COUNT;
     
     u_int8_t count = 0;
     for (u_int8_t j = 0; j < GAME_ROWS_COUNT; j++) {

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		28306AA120114E6600F7A338 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 28306AA020114E6500F7A338 /* Info.plist */; };
+		28306AA4201155D400F7A338 /* GameSceneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28306AA3201155D400F7A338 /* GameSceneViewController.m */; };
+		28306AA62011611000F7A338 /* btn-menu-background.png in Resources */ = {isa = PBXBuildFile; fileRef = 28306AA52011611000F7A338 /* btn-menu-background.png */; };
 		288E1D97200E680100346E77 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 288E1D96200E680100346E77 /* AppDelegate.m */; };
 		288E1D9A200E680100346E77 /* GameFieldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 288E1D99200E680100346E77 /* GameFieldViewController.m */; };
 		288E1D9D200E680100346E77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 288E1D9B200E680100346E77 /* Main.storyboard */; };
@@ -28,6 +30,9 @@
 
 /* Begin PBXFileReference section */
 		28306AA020114E6500F7A338 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = TicTacToe/Info.plist; sourceTree = "<group>"; };
+		28306AA2201155D400F7A338 /* GameSceneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameSceneViewController.h; sourceTree = "<group>"; };
+		28306AA3201155D400F7A338 /* GameSceneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameSceneViewController.m; sourceTree = "<group>"; };
+		28306AA52011611000F7A338 /* btn-menu-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-menu-background.png"; sourceTree = "<group>"; };
 		288E1D92200E680100346E77 /* TicTacToe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicTacToe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		288E1D95200E680100346E77 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		288E1D96200E680100346E77 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -112,6 +117,8 @@
 				288E1DC3200F8B7100346E77 /* TttPlayfieldLayout.m */,
 				288E1DB4200E6FC900346E77 /* MenuViewController.h */,
 				288E1DB5200E6FC900346E77 /* MenuViewController.m */,
+				28306AA2201155D400F7A338 /* GameSceneViewController.h */,
+				28306AA3201155D400F7A338 /* GameSceneViewController.m */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -150,6 +157,7 @@
 		288E1DC0200E7F1600346E77 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				28306AA52011611000F7A338 /* btn-menu-background.png */,
 				288E1DC6200FFDE900346E77 /* bg-GameField.png */,
 				288E1DB2200E6D6E00346E77 /* btn-background.png */,
 				288E1DAE200E6BFB00346E77 /* o_mark.png */,
@@ -219,6 +227,7 @@
 				28306AA120114E6600F7A338 /* Info.plist in Resources */,
 				288E1DA2200E680100346E77 /* LaunchScreen.storyboard in Resources */,
 				288E1DB1200E6BFB00346E77 /* x_mark.png in Resources */,
+				28306AA62011611000F7A338 /* btn-menu-background.png in Resources */,
 				288E1D9F200E680100346E77 /* Assets.xcassets in Resources */,
 				288E1DC7200FFDE900346E77 /* bg-GameField.png in Resources */,
 				288E1DB0200E6BFB00346E77 /* o_mark.png in Resources */,
@@ -241,6 +250,7 @@
 				288E1DB9200E708C00346E77 /* GameController.m in Sources */,
 				288E1D97200E680100346E77 /* AppDelegate.m in Sources */,
 				288E1DC4200F8B7100346E77 /* TttPlayfieldLayout.m in Sources */,
+				28306AA4201155D400F7A338 /* GameSceneViewController.m in Sources */,
 				288E1DB6200E6FCA00346E77 /* MenuViewController.m in Sources */,
 				288E1DBC200E70AA00346E77 /* GameModel.m in Sources */,
 			);

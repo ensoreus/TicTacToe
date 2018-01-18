@@ -21,6 +21,7 @@
 
 - (void) startGameWithBeginner:(PlayRole)playerRole{
     self.nextPlayerMove = playerRole;
+    [self updateTurnHint];
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
@@ -33,6 +34,11 @@
     if (gameResult != grContinue){
         self.onVictory(gameResult);
     }
+    [self updateTurnHint];
+}
+- (void) updateTurnHint{
+    NSString* nextPlayerMoveTitle = self.nextPlayerMove == prX ? @"X's turn" : @"O's turn";
+    self.onTurn(nextPlayerMoveTitle);
 }
 
 - (void) switchPlayer{

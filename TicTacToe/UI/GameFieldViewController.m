@@ -39,6 +39,11 @@
     self.gameController.onVictory = ^(GameResult result){
         [weakSelf claimGameResult:result];
     };
+    
+    self.gameController.onTurn = ^(NSString *whosTurn) {
+        weakSelf.nextPlayerTurnHint.text = whosTurn;
+    };
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated{
