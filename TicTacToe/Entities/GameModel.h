@@ -9,8 +9,24 @@
 #import <UIKit/UIKit.h>
 #import "Types.h"
 
+typedef enum {
+  wlTop = 0,
+  wlCenter,
+  wlBottom,
+  wlSlash,
+  wlBackSlash,
+  wlRight,
+  wlMiddle,
+  wlLeft,
+  wlMax
+} WinLine;
+
+@class SignModel;
+
 @interface GameModel : NSObject<UICollectionViewDataSource>
-@property (nonatomic) BOOL isFirstMoveMadeX;
 - (void) turnAsPlayer:(PlayRole)player toPos:(u_int8_t)turnPos;
 - (void) reset;
+- (NSArray<SignModel*>*) winLine:(WinLine)line;
+
+
 @end

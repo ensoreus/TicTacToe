@@ -17,7 +17,8 @@ typedef enum {
 
 typedef enum {
     prX,
-    prO
+    prO,
+    prNone
 } PlayRole;
 
 typedef struct{

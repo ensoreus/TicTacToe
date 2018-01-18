@@ -15,4 +15,5 @@
 @property(nonatomic, copy) void (^onVictory)(GameResult result);
 @property(nonatomic, weak) GameModel* gameModel;
 - (void) startGameWithBeginner:(PlayRole)playerRole;
+- (void) resetGame;
 @end

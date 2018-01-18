@@ -40,9 +40,14 @@
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    self.gameModel.isFirstMoveMadeX = self.isXFirst;
+    PlayRole firstMovePlayer = self.isXFirst ? prX : prO;
+    [self.gameController startGameWithBeginner:firstMovePlayer];
 }
 
+- (void) viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    [self.gameController resetGame];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

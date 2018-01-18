@@ -8,7 +8,7 @@
 
 #import "SignModel.h"
 
-#define IMG_BLANK @"btn-background.png"
+#define IMG_BLANK  @"btn-background.png"
 #define IMG_X_MARK @"x_mark.png"
 #define IMG_O_MARK @"o_mark.png"
 
@@ -30,4 +30,5 @@
     model.signImagePath = (tag == Xsign) ? IMG_X_MARK : IMG_O_MARK;
     return model;
 }
+
 @end
