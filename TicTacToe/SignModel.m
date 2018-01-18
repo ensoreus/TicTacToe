@@ -9,5 +9,13 @@
 #import "SignModel.h"
 
 @implementation SignModel
-
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.signTag = NoSign;
+        self.signImagePath = @"btn-background.png";
+    }
+    return self;
+}
 @end

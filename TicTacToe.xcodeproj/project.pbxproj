@@ -21,6 +21,8 @@
 		288E1DB9200E708C00346E77 /* GameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 288E1DB8200E708C00346E77 /* GameController.m */; };
 		288E1DBC200E70AA00346E77 /* GameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 288E1DBB200E70AA00346E77 /* GameModel.m */; };
 		288E1DBF200E741400346E77 /* SignModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 288E1DBE200E741400346E77 /* SignModel.m */; };
+		288E1DC4200F8B7100346E77 /* TttPlayfieldLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 288E1DC3200F8B7100346E77 /* TttPlayfieldLayout.m */; };
+		288E1DC7200FFDE900346E77 /* bg-GameField.png in Resources */ = {isa = PBXBuildFile; fileRef = 288E1DC6200FFDE900346E77 /* bg-GameField.png */; };
 		5A5970CBD25486A5D1AA055E /* Pods_TicTacToe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65AF92B3B65F5F97D17E7465 /* Pods_TicTacToe.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +51,11 @@
 		288E1DBB200E70AA00346E77 /* GameModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameModel.m; sourceTree = "<group>"; };
 		288E1DBD200E741400346E77 /* SignModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignModel.h; sourceTree = "<group>"; };
 		288E1DBE200E741400346E77 /* SignModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignModel.m; sourceTree = "<group>"; };
+		288E1DC1200F787600346E77 /* Types.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Types.h; sourceTree = "<group>"; };
+		288E1DC2200F8B7100346E77 /* TttPlayfieldLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TttPlayfieldLayout.h; sourceTree = "<group>"; };
+		288E1DC3200F8B7100346E77 /* TttPlayfieldLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TttPlayfieldLayout.m; sourceTree = "<group>"; };
+		288E1DC5200FF0F000346E77 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		288E1DC6200FFDE900346E77 /* bg-GameField.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-GameField.png"; sourceTree = "<group>"; };
 		65AF92B3B65F5F97D17E7465 /* Pods_TicTacToe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TicTacToe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB4CFC8830C72D3AA1971FFE /* Pods-TicTacToe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TicTacToe.release.xcconfig"; path = "Pods/Target Support Files/Pods-TicTacToe/Pods-TicTacToe.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -106,15 +113,19 @@
 			children = (
 				288E1D95200E680100346E77 /* AppDelegate.h */,
 				288E1D96200E680100346E77 /* AppDelegate.m */,
-				288E1D98200E680100346E77 /* GameFieldViewController.h */,
 				288E1DB7200E708C00346E77 /* GameController.h */,
 				288E1DB8200E708C00346E77 /* GameController.m */,
+				288E1DC1200F787600346E77 /* Types.h */,
+				288E1DC5200FF0F000346E77 /* Constants.h */,
 				288E1DBA200E70AA00346E77 /* GameModel.h */,
 				288E1DBB200E70AA00346E77 /* GameModel.m */,
+				288E1D98200E680100346E77 /* GameFieldViewController.h */,
 				288E1D99200E680100346E77 /* GameFieldViewController.m */,
 				288E1DBD200E741400346E77 /* SignModel.h */,
 				288E1DBE200E741400346E77 /* SignModel.m */,
 				288E1D9B200E680100346E77 /* Main.storyboard */,
+				288E1DC2200F8B7100346E77 /* TttPlayfieldLayout.h */,
+				288E1DC3200F8B7100346E77 /* TttPlayfieldLayout.m */,
 				288E1DB4200E6FC900346E77 /* MenuViewController.h */,
 				288E1DB5200E6FC900346E77 /* MenuViewController.m */,
 				288E1D9E200E680100346E77 /* Assets.xcassets */,
@@ -130,6 +141,7 @@
 		288E1DC0200E7F1600346E77 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				288E1DC6200FFDE900346E77 /* bg-GameField.png */,
 				288E1DB2200E6D6E00346E77 /* btn-background.png */,
 				288E1DAE200E6BFB00346E77 /* o_mark.png */,
 				288E1DAF200E6BFB00346E77 /* x_mark.png */,
@@ -201,6 +213,7 @@
 				288E1DA2200E680100346E77 /* LaunchScreen.storyboard in Resources */,
 				288E1DB1200E6BFB00346E77 /* x_mark.png in Resources */,
 				288E1D9F200E680100346E77 /* Assets.xcassets in Resources */,
+				288E1DC7200FFDE900346E77 /* bg-GameField.png in Resources */,
 				288E1DB0200E6BFB00346E77 /* o_mark.png in Resources */,
 				288E1DB3200E6D6E00346E77 /* btn-background.png in Resources */,
 				288E1D9D200E680100346E77 /* Main.storyboard in Resources */,
@@ -274,6 +287,7 @@
 				288E1DAD200E6BD400346E77 /* SignCell.m in Sources */,
 				288E1DB9200E708C00346E77 /* GameController.m in Sources */,
 				288E1D97200E680100346E77 /* AppDelegate.m in Sources */,
+				288E1DC4200F8B7100346E77 /* TttPlayfieldLayout.m in Sources */,
 				288E1DB6200E6FCA00346E77 /* MenuViewController.m in Sources */,
 				288E1DBC200E70AA00346E77 /* GameModel.m in Sources */,
 			);

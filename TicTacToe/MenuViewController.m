@@ -7,6 +7,7 @@
 //
 
 #import "MenuViewController.h"
+#import "GameFieldViewController.h"
 
 @interface MenuViewController ()
 
@@ -30,6 +31,13 @@
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
+    if ([segue.identifier isEqualToString:@"XplaySegue"]) {
+        GameFieldViewController* gameViewController = (GameFieldViewController*)segue.destinationViewController;
+        gameViewController.isXFirst = YES;
+    }else if ([segue.identifier isEqualToString:@"OplaySegue"]) {
+        GameFieldViewController* gameViewController = (GameFieldViewController*)segue.destinationViewController;
+        gameViewController.isXFirst = NO;
+    }
 }
 
 @end

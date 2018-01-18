@@ -9,6 +9,7 @@
 #import "GameModel.h"
 #import "SignModel.h"
 #import "SignCell.h"
+#import "Constants.h"
 
 @interface GameModel()
 @property (nonatomic, strong) NSMutableArray<SignModel*>* gamestate;
@@ -20,20 +21,22 @@
 {
     self = [super init];
     if (self) {
-        self.gamestate = [[NSMutableArray alloc] initWithCapacity:9];
+        self.gamestate = [[NSMutableArray alloc] initWithCapacity:GAME_CELLS_COUNT];
+        for (u_int8_t i = 0; i < GAME_CELLS_COUNT; i++) {
+            [self.gamestate addObject:[SignModel new]];
+        }
     }
     return self;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return 9;
+    return GAME_CELLS_COUNT;
 }
 
-// The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    SignCell* cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"signCell" forIndexPath:indexPath];
+    SignCell* cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"SignCell" forIndexPath:indexPath];
     cell.model = self.gamestate[indexPath.row];
-    
+    [cell drawSign];
     return cell;
 }
 

@@ -8,8 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GameFieldViewController : UIViewController
-
-
+@interface GameFieldViewController : UICollectionViewController
+@property(nonatomic) BOOL isXFirst;
 @end
 

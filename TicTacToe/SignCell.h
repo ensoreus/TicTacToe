@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SignModel.h"
+
+@class SignModel;
 
 @interface SignCell : UICollectionViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *imgSign;
 @property (nonatomic, weak) SignModel* model;
+- (void) drawSign;
 @end

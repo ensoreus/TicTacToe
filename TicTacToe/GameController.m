@@ -9,5 +9,7 @@
 #import "GameController.h"
 
 @implementation GameController
-
+- (void) startGameWithBeginner:(PlayRole)playerRole{
+    
+}
 @end

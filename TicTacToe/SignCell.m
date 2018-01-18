@@ -7,17 +7,11 @@
 //
 
 #import "SignCell.h"
-#import <ReactiveObjC/ReactiveObjC.h>
+#import "SignModel.h"
 
 @implementation SignCell
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-        [RACObserve(self, model) subscribeNext:^(SignModel* model){
-            
-        }];
-    }
-    return self;
+
+- (void) drawSign{
+    [self.imgSign setImage:[UIImage imageNamed:self.model.signImagePath]];
 }
 @end

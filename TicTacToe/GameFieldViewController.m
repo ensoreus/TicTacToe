@@ -10,21 +10,34 @@
 #import "GameModel.h"
 #import "GameController.h"
 #import "SignCell.h"
+#import "TttPlayfieldLayout.h"
 
 @interface GameFieldViewController ()
 @property (nonatomic, strong) GameModel* gameModel;
 @property (nonatomic, strong) GameController* gameController;
-@property (nonatomic, weak) UICollectionView* collectionView;
 @end
 
 @implementation GameFieldViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.collectionView = (UICollectionView*) self.view;
+    self.gameModel = [GameModel new];
+    self.gameController = [GameController new];
     self.collectionView.delegate = self.gameController;
     self.collectionView.dataSource = self.gameModel;
-    [self.collectionView registerClass:SignCell.class forCellWithReuseIdentifier:@"signCell"];
+    TttPlayfieldLayout* layout = [TttPlayfieldLayout new];
+    layout.collectionViewFrame = self.collectionView.frame;
+    self.collectionView.collectionViewLayout = layout;
+    __block GameFieldViewController* weakSelf = self;
+    self.gameController.onUpdateGameField = ^(){
+        [weakSelf.collectionView reloadData];
+    };
+   // [self.collectionView registerClass:SignCell.class forCellWithReuseIdentifier:@"SignCell"];
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    self.gameModel.isFirstMoveMadeX = self.isXFirst;
 }
 
 - (void)didReceiveMemoryWarning {
