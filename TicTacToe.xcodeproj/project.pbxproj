@@ -118,6 +118,19 @@
 			path = Entities;
 			sourceTree = "<group>";
 		};
+		28306A9F20113C8E00F7A338 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				288E1D98200E680100346E77 /* GameFieldViewController.h */,
+				288E1D99200E680100346E77 /* GameFieldViewController.m */,
+				288E1DC2200F8B7100346E77 /* TttPlayfieldLayout.h */,
+				288E1DC3200F8B7100346E77 /* TttPlayfieldLayout.m */,
+				288E1DB4200E6FC900346E77 /* MenuViewController.h */,
+				288E1DB5200E6FC900346E77 /* MenuViewController.m */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		288E1D89200E680100346E77 = {
 			isa = PBXGroup;
 			children = (
@@ -140,16 +153,11 @@
 		288E1D94200E680100346E77 /* TicTacToe */ = {
 			isa = PBXGroup;
 			children = (
-				28306A9D20113C1000F7A338 /* Misc */,
-				28306A9E20113C3500F7A338 /* Entities */,
 				288E1DC1200F787600346E77 /* Types.h */,
 				288E1DC5200FF0F000346E77 /* Constants.h */,
-				288E1D98200E680100346E77 /* GameFieldViewController.h */,
-				288E1D99200E680100346E77 /* GameFieldViewController.m */,
-				288E1DC2200F8B7100346E77 /* TttPlayfieldLayout.h */,
-				288E1DC3200F8B7100346E77 /* TttPlayfieldLayout.m */,
-				288E1DB4200E6FC900346E77 /* MenuViewController.h */,
-				288E1DB5200E6FC900346E77 /* MenuViewController.m */,
+				28306A9D20113C1000F7A338 /* Misc */,
+				28306A9E20113C3500F7A338 /* Entities */,
+				28306A9F20113C8E00F7A338 /* UI */,
 			);
 			path = TicTacToe;
 			sourceTree = "<group>";
