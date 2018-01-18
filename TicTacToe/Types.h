@@ -17,12 +17,18 @@ typedef enum {
 
 typedef enum {
     prX,
-    pbO
+    prO
 } PlayRole;
 
 typedef struct{
     u_int8_t x;
     u_int8_t y;
 } TurnPos;
+
+typedef enum {
+    NoSign,
+    Xsign,
+    Osign
+} SignTag;
 
 #endif /* Types_h */

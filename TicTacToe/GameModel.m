@@ -40,4 +40,14 @@
     return cell;
 }
 
+- (void) turnAsPlayer:(PlayRole)player toPos:(u_int8_t)turnPos{
+    self.gamestate[turnPos] = [SignModel modelForPlayer:player];
+}
+
+- (void) reset{
+    [self.gamestate removeAllObjects];
+    for (u_int8_t i = 0; i < GAME_CELLS_COUNT; i++) {
+        [self.gamestate addObject:[SignModel new]];
+    }
+}
 @end

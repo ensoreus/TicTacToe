@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "Types.h"
+@class GameModel;
 
 @interface GameController : NSObject<UICollectionViewDelegate>
 @property(nonatomic, copy) void (^onUpdateGameField)(void);
 @property(nonatomic, copy) void (^onVictory)(GameResult result);
-@property(nonatomic, copy) void (^turn)(PlayRole player, TurnPos turnPos);
+@property(nonatomic, weak) GameModel* gameModel;
 - (void) startGameWithBeginner:(PlayRole)playerRole;
 @end

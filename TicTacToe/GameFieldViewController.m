@@ -23,16 +23,19 @@
     [super viewDidLoad];
     self.gameModel = [GameModel new];
     self.gameController = [GameController new];
+    self.gameController.gameModel = self.gameModel;
+    
     self.collectionView.delegate = self.gameController;
     self.collectionView.dataSource = self.gameModel;
+
     TttPlayfieldLayout* layout = [TttPlayfieldLayout new];
     layout.collectionViewFrame = self.collectionView.frame;
     self.collectionView.collectionViewLayout = layout;
+    
     __block GameFieldViewController* weakSelf = self;
     self.gameController.onUpdateGameField = ^(){
         [weakSelf.collectionView reloadData];
     };
-   // [self.collectionView registerClass:SignCell.class forCellWithReuseIdentifier:@"SignCell"];
 }
 
 - (void)viewWillAppear:(BOOL)animated{

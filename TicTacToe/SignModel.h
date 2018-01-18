@@ -7,14 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Types.h"
 
-typedef enum {
-    NoSign,
-    Xsign,
-    Osign
-} SignTag;
 
 @interface SignModel : NSObject
 @property (nonatomic) SignTag signTag;
 @property (nonatomic, strong) NSString* signImagePath;
+
++ (SignModel*) modelForPlayer:(PlayRole)role;
 @end

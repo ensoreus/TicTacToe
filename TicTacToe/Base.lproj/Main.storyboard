@@ -63,12 +63,8 @@
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" id="3Iv-AH-bKH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <collectionViewLayout key="collectionViewLayout" id="S9x-h9-nS4" customClass="TttPlayfieldLayout"/>
-                        <imageView key="backgroundView" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-GameField.png" id="D1W-An-m8b">
-                            <rect key="frame" x="0.0" y="-64" width="375" height="667"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        </imageView>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SignCell" id="LR1-Xu-SQx" customClass="SignCell">
                                 <rect key="frame" x="0.0" y="0.0" width="102" height="105"/>
@@ -77,16 +73,17 @@
                                     <rect key="frame" x="0.0" y="0.0" width="102" height="105"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="o_mark.png" translatesAutoresizingMaskIntoConstraints="NO" id="Vzd-Ix-ciy">
+                                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="o_mark.png" translatesAutoresizingMaskIntoConstraints="NO" id="Vzd-Ix-ciy">
                                             <rect key="frame" x="0.0" y="0.0" width="102" height="105"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </imageView>
                                     </subviews>
                                 </view>
                                 <constraints>
-                                    <constraint firstItem="Vzd-Ix-ciy" firstAttribute="centerX" secondItem="LR1-Xu-SQx" secondAttribute="centerX" id="4nR-Nd-Ga8"/>
+                                    <constraint firstItem="Vzd-Ix-ciy" firstAttribute="top" secondItem="LR1-Xu-SQx" secondAttribute="top" id="4Nd-nE-6o4"/>
                                     <constraint firstItem="Vzd-Ix-ciy" firstAttribute="width" secondItem="LR1-Xu-SQx" secondAttribute="width" id="Aal-2C-7XC"/>
                                     <constraint firstItem="Vzd-Ix-ciy" firstAttribute="height" secondItem="LR1-Xu-SQx" secondAttribute="height" id="Mjn-p1-6TL"/>
-                                    <constraint firstItem="Vzd-Ix-ciy" firstAttribute="centerY" secondItem="LR1-Xu-SQx" secondAttribute="centerY" id="UJG-VQ-206"/>
+                                    <constraint firstItem="Vzd-Ix-ciy" firstAttribute="leading" secondItem="LR1-Xu-SQx" secondAttribute="leading" id="QO7-JH-2EO"/>
                                 </constraints>
                                 <size key="customSize" width="102" height="105"/>
                                 <connections>
@@ -123,7 +120,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bg-GameField.png" width="375" height="512"/>
         <image name="btn-background.png" width="100" height="100"/>
         <image name="o_mark.png" width="64" height="64"/>
     </resources>
