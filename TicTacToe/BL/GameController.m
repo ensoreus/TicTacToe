@@ -9,9 +9,12 @@
 #import "GameController.h"
 #import "GameModel.h"
 #import "Types.h"
+#import "SignModel.h"
+#import "Constants.h"
 
 @interface GameController()
 @property (nonatomic) PlayRole nextPlayerMove;
+@property (nonatomic) u_int8_t turnsCount;
 @end
 
 @implementation GameController
@@ -24,7 +27,12 @@
     [collectionView deselectItemAtIndexPath:indexPath animated:NO];
     [self.gameModel turnAsPlayer:self.nextPlayerMove toPos:indexPath.row];
     [self switchPlayer];
+    self.turnsCount++;
     self.onUpdateGameField();
+    GameResult gameResult = [self calculateGameStatusOnTurn];
+    if (gameResult != grContinue){
+        self.onVictory(gameResult);
+    }
 }
 
 - (void) switchPlayer{
@@ -36,22 +44,38 @@
 }
 
 - (void) resetGame{
+    self.turnsCount = 0;
     [self.gameModel reset];
 }
 
-- (PlayRole) calculateGameStatus{
+//Search winner row by row
+- (GameResult) calculateGameStatusOnTurn{
+    GameResult result = grContinue;
     for (WinLine wl = wlTop; wl != wlMax; wl++) {
         NSArray<SignModel*>* line = [self.gameModel winLine:wl];
         PlayRole winner = [self lookForWinCombination:line];
         if(winner != prNone){
-            return winner;
+            result = (winner == prX) ? grXwon : grOwon;
         }
     }
-    return prNone;
+    if (result == grContinue && _turnsCount == GAME_CELLS_COUNT){
+        result = grDraw;
+    }
+    return result;
 }
 
+// Search winning combination in a row
 - (PlayRole) lookForWinCombination:(NSArray<SignModel*>*) line{
-    
+    if ((line[0].signTag == Xsign) &&
+        (line[1].signTag == Xsign) &&
+        (line[2].signTag == Xsign)){
+            return prX;
+    }else if((line[0].signTag == Osign) &&
+             (line[1].signTag == Osign) &&
+             (line[2].signTag == Osign)){
+        return prO;
+    }
+    return prNone;
 }
 
 @end

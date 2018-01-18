@@ -12,6 +12,7 @@
 
 @interface SignModel : NSObject
 @property (nonatomic) SignTag signTag;
+@property (nonatomic) BOOL isX;
 @property (nonatomic, strong) NSString* signImagePath;
 
 + (SignModel*) modelForPlayer:(PlayRole)role;

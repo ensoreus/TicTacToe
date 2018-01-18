@@ -46,7 +46,7 @@
         for (u_int8_t i = 0; i < GAME_COLUMNS_COUNT; i++){
             NSIndexPath* indexPath = [NSIndexPath indexPathForRow:count++ inSection:0];
             UICollectionViewLayoutAttributes* attr = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
-            attr.frame = CGRectMake(_xOffset + j * _cellWidth, _yOffset + i * _cellHeight, _cellWidth, _cellHeight);
+            attr.frame = CGRectMake(_xOffset + i * _cellWidth, _yOffset + j * _cellHeight, _cellWidth, _cellHeight);
             [self.preparedLayoutAttributes addObject:attr];
         }
     }

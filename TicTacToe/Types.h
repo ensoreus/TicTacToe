@@ -12,7 +12,8 @@
 typedef enum {
     grDraw,
     grXwon,
-    grOwon
+    grOwon,
+    grContinue
 } GameResult;
 
 typedef enum {
@@ -27,9 +28,9 @@ typedef struct{
 } TurnPos;
 
 typedef enum {
+    Osign,
     NoSign,
-    Xsign,
-    Osign
+    Xsign
 } SignTag;
 
 #endif /* Types_h */

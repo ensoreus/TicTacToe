@@ -77,18 +77,19 @@
         default:
             break;
     }
+    return [self topLine];
 }
 
 - (NSArray<SignModel*>*) topLine{
-    return [self.gamestate subarrayWithRange:NSMakeRange(0, 2)];
+    return [self.gamestate subarrayWithRange:NSMakeRange(0, 3)];
 }
 
 - (NSArray<SignModel*>*) middleLine{
-    return [self.gamestate subarrayWithRange:NSMakeRange(3, 5)];
+    return [self.gamestate subarrayWithRange:NSMakeRange(3, 3)];
 }
 
 - (NSArray<SignModel*>*) bottomLine{
-    return [self.gamestate subarrayWithRange:NSMakeRange(6, 8)];
+    return [self.gamestate subarrayWithRange:NSMakeRange(6, 3)];
 }
 
 - (NSArray<SignModel*>*) slashLine{

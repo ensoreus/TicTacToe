@@ -27,6 +27,7 @@
     SignModel* model = [SignModel new];
     SignTag tag = (role == prX) ? Xsign : Osign;
     model.signTag = tag;
+    model.isX = (role == prX);
     model.signImagePath = (tag == Xsign) ? IMG_X_MARK : IMG_O_MARK;
     return model;
 }

@@ -36,6 +36,9 @@
     self.gameController.onUpdateGameField = ^(){
         [weakSelf.collectionView reloadData];
     };
+    self.gameController.onVictory = ^(GameResult result){
+        [weakSelf claimGameResult:result];
+    };
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -48,6 +51,36 @@
     [super viewWillDisappear:animated];
     [self.gameController resetGame];
 }
+
+- (void) claimGameResult:(GameResult)gameResult{
+    UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"" message:[self textFor:gameResult] preferredStyle:UIAlertControllerStyleAlert];
+    __block GameFieldViewController* weakSelf = self;
+    UIAlertAction* okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [weakSelf finishGame];
+    }];
+    [alert addAction:okAction];
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
+- (NSString*) textFor:(GameResult)gameResult{
+    switch (gameResult) {
+        case grXwon:
+            return @"X wins";
+            break;
+        case grOwon:
+            return @"O wins";
+            break;
+        default:
+            return @"A draw";
+            break;
+    }
+}
+
+- (void) finishGame{
+    //[self.gameController resetGame];
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
