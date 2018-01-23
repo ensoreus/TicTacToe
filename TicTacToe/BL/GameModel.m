@@ -118,7 +118,7 @@
 
 - (NSArray<SignModel*>*) middleColumn{
     NSMutableArray<SignModel*>* mLine = [[NSMutableArray alloc] initWithCapacity:3];
-    [mLine addObject:self.gamestate[2]];
+    [mLine addObject:self.gamestate[1]];
     [mLine addObject:self.gamestate[4]];
     [mLine addObject:self.gamestate[7]];
     return [mLine copy];
